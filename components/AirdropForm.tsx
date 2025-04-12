@@ -131,6 +131,13 @@ export const AirdropForm = ({ className }: AirdropFormProps) => {
           const data = await response.json();
 
           if (!response.ok) {
+            if (response.status === 429) {
+              const resetTime = new Date(data.details?.resetAt);
+              const formattedTime = resetTime.toLocaleTimeString();
+              throw new Error(
+                `Rate limited: Next airdrop available after ${formattedTime}`
+              );
+            }
             throw new Error(data.error || "Failed to process airdrop");
           }
 
@@ -140,6 +147,7 @@ export const AirdropForm = ({ className }: AirdropFormProps) => {
           }));
           return { success: true };
         }
+
         const response = await fetch("/api/airdrop", {
           method: "POST",
           headers: {
@@ -155,6 +163,13 @@ export const AirdropForm = ({ className }: AirdropFormProps) => {
         const data = await response.json();
 
         if (!response.ok) {
+          if (response.status === 429) {
+            const resetTime = new Date(data.details?.resetAt);
+            const formattedTime = resetTime.toLocaleTimeString();
+            throw new Error(
+              `Rate limited: Next airdrop available after ${formattedTime}`
+            );
+          }
           throw new Error(data.error || "Failed to process airdrop");
         }
 
@@ -259,7 +274,7 @@ export const AirdropForm = ({ className }: AirdropFormProps) => {
         <CardHeader>
           <CardTitle>
             <div className="flex items-center justify-between gap-3">
-              <span>Request Airdrop</span>
+              <span>Request Faucet</span>
             </div>
           </CardTitle>
           <CardDescription>

@@ -29,6 +29,7 @@
     "bech32": "^2.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "ioredis": "^5.6.1",
     "lucide-react": "^0.263.1",
     "next": "^14.0.0",
     "postcss": "^8.4.32",

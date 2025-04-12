@@ -4,3 +4,6 @@ export const SITE = {
 };
 
 export const RPC_ENDPOINT = "https://rpc.xion-testnet-2.burnt.com:443";
+
+export const DAILY_LIMIT = 24 * 60 * 60 * 1000;
+export const LIFETIME_LIMIT = 5;

@@ -10,7 +10,7 @@ export function Footer() {
       <p className="text-sm text-center text-white/50">
         Operated by the{" "}
         <Link
-          href="https://testnet.blazeswap.io"
+          href="https://blazeswap.io"
           target="_blank"
           className="underline"
         >
