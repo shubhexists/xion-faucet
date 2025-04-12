@@ -5,6 +5,9 @@
 CHAIN_ID - xion-testnet-2
 
 
+XION - UXION - uxion
+
+
 Earth - EAR - (xion1dyak845ktsrcskkl6kjx96za7zw9l6k7hll8lpy0wtxvvcuqfe6qkrenrp)
 
 
