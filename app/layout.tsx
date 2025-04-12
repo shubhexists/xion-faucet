@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: "Blazeswap Testnet Faucet",
   description: "Get swap tokens airdrop from this public Faucet, on testnet",
+  openGraph: {
+    images: "/opengraph.png",
+  },
 };
 
 export default function RootLayout({
